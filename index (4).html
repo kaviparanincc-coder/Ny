@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My Assistant</title>
+  <meta name="description" content="A private, offline task manager. Your tasks stay on this device.">
+  <meta name="theme-color" content="#FAF7F2" id="theme-color">
+  <meta name="color-scheme" content="light dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="My Assistant">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <div id="app">
+    <header class="appbar" id="appbar">
+      <button class="icon-btn" id="back" aria-label="Back" hidden></button>
+      <h1 id="title">Today</h1>
+    </header>
+    <main id="view" tabindex="-1" aria-live="off"></main>
+    <button class="fab" id="fab" type="button"></button>
+    <nav class="bottomnav" id="nav" aria-label="Main"></nav>
+    <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+  </div>
+  <dialog id="sheet" class="sheet" aria-labelledby="sheet-title"></dialog>
+  <dialog id="confirm" class="sheet confirm" aria-labelledby="confirm-title"></dialog>
+  <noscript><p style="padding:16px">My Assistant needs JavaScript to run. Nothing is sent anywhere; it only works on this device.</p></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
